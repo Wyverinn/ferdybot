@@ -30,6 +30,8 @@ const foods = [
 
 const marocchinoURL = 'https://labottegadelbuoncaffe.com/wp-content/uploads/2019/09/caff%C3%A8-marocchino.jpg'
 
+const azioneURL = 'https://it.finance.yahoo.com/quote/BTC-EUR/';
+
 const helpMsg =	'\`\`\`'															+ '\n'
 			+	'ciao ferdybot -> saluto'											+ '\n'
 			+	'caffè         -> elogio il caffè'									+ '\n'
@@ -47,6 +49,7 @@ module.exports = {
 	songs,
 	foods,
 	marocchinoURL,
+	azioneURL,
 	helpMsg,
 	muteTimer
 }

@@ -51,6 +51,10 @@ client.on('message', msg => {
         case '-ferdy help':
             msg.channel.send(helpMsg)
             break
+        case '-borsa':
+        	const attachment = new MessageAttachment(azioneURL)
+            msg.channel.send(`oggi i miei investimenti vanno così ${msg.author}`, attachment)
+            break
         default:
             return
     }
