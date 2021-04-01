@@ -1,9 +1,18 @@
+const prefix = '!'
+
 const sentences = [
     'Ah, le mie vecchie ossa...',
-    'Ora adotto il metodo mafioso – prima lo faccio e poi lo spiego.',
+    'Ora adotto il metodo mafioso – prima lo faccio e poi lo dichiaro.',
     'NO ORFANI',
     'New. Project. WallStreet.',
     'Quando gli dei vogliono distruggere un uomo, prima lo rendono folle.',
+	'Un programmatore Java non ha una vita sentimentale.',
+	'Ragazzi, ricordate sempre la forza che spinge tutti noi a fare questo lavoro. I soldi.',
+]
+
+const girls = [
+    'Oriella',
+    'Laura',
 ]
 
 const greetings = [
@@ -28,10 +37,6 @@ const foods = [
 	'una pizza panna e salmone'
 ]
 
-const marocchinoURL = 'https://labottegadelbuoncaffe.com/wp-content/uploads/2019/09/caff%C3%A8-marocchino.jpg'
-
-const azioneURL = 'https://it.finance.yahoo.com/quote/BTC-EUR/';
-
 const helpMsg =	'\`\`\`'															+ '\n'
 			+	'ciao ferdybot -> saluto'											+ '\n'
 			+	'caffè         -> elogio il caffè'									+ '\n'
@@ -44,12 +49,12 @@ const helpMsg =	'\`\`\`'															+ '\n'
 const muteTimer = 20000
 
 module.exports = {
+	prefix,
 	sentences,
+	girls,
 	greetings,
 	songs,
 	foods,
-	marocchinoURL,
-	azioneURL,
 	helpMsg,
 	muteTimer
 }
