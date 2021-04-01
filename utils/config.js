@@ -1,9 +1,13 @@
+const prefix = '!'
+
 const sentences = [
     'Ah, le mie vecchie ossa...',
     'Ora adotto il metodo mafioso – prima lo faccio e poi lo spiego.',
     'NO ORFANI',
     'New. Project. WallStreet.',
     'Quando gli dei vogliono distruggere un uomo, prima lo rendono folle.',
+	'Un programmatore Java non ha una vita sentimentale.',
+	'Ragazzi, ricordate sempre la forza che spinge tutti noi a fare questo lavoro. I soldi.',
 ]
 
 const greetings = [
@@ -42,6 +46,7 @@ const helpMsg =	'\`\`\`'															+ '\n'
 const muteTimer = 20000
 
 module.exports = {
+	prefix,
 	sentences,
 	greetings,
 	songs,
