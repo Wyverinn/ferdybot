@@ -19,6 +19,7 @@ commandFolders.forEach(folder => {
 })
 
 // test push
+// test 2
 
 client.login(process.env.BOT_TOKEN)
 
