@@ -1,5 +1,5 @@
 const { Client, MessageAttachment } = require('discord.js')
-const { sentences, greetings, songs, foods, marocchinoURL, helpMsg, muteTimer } = require('./utils/config')
+const { sentences, greetings, songs, foods, marocchinoURL, azioneURL, helpMsg, muteTimer } = require('./utils/config')
 const { random } = require('./utils/helpers')
 require('dotenv').config()
 
@@ -17,8 +17,8 @@ client.on('message', msg => {
             msg.channel.send(random(sentences))
             break
         case '-marocchino':
-            const attachment = new MessageAttachment(marocchinoURL)
-            msg.channel.send(`${msg.author}`, attachment)
+            const marocchino = new MessageAttachment(marocchinoURL)
+            msg.channel.send(`${msg.author}`, marocchino)
             break
         case (msg.content.includes('ciao ferdybot') && msg.content):
             msg.reply(`ben arrivato. ${random(greetings)}`)
@@ -52,8 +52,7 @@ client.on('message', msg => {
             msg.channel.send(helpMsg)
             break
         case '-borsa':
-        	const attachment = new MessageAttachment(azioneURL)
-            msg.channel.send(`oggi i miei investimenti vanno così ${msg.author}`, attachment)
+            msg.channel.send(`${msg.author}, oggi i miei investimenti vanno così ` + azioneURL)
             break
         default:
             return
