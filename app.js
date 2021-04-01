@@ -26,6 +26,6 @@ client.on('message', msg => {
     if (msg.author.bot) return
 
     msg.content.startsWith(prefix)
-        ? doCmd(client, msg)
+        ? doCmd(msg)
         : interpret(msg)
 })

@@ -1,12 +1,12 @@
 const { random, isFemale } = require('../utils/helpers')
 const { prefix, greetings, foods } = require('../utils/config')
 
-const doCmd = (client, msg) => {
+const doCmd = (msg) => {
     const args = msg.content.slice(prefix.length).trim().split(/ +/)
     const commandName = args.shift().toLowerCase()
 
-    const command = client.commands.get(commandName) //
-        || client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
+    const command = msg.client.commands.get(commandName) //
+        || msg.client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
 
     if (!command) {
         msg.channel.send(`Non conosco questo comando. Ti metto un attimo in pausa, ${msg.author}.`)
